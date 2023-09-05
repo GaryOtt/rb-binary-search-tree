@@ -1,3 +1,5 @@
+# Overview
+
 An implementation of a Red/Black Binary Search Tree.
 
 Originally created in 2014, this library has been thouroughly tested and battle hardened.
@@ -10,7 +12,7 @@ Binary search trees exhibit the following characteristics:
 Thanks go to those responsible for this lecture which was supremely helpful: https://youtu.be/hm2GHwyKF1o?si=-WemyU80lZiaae_4
 
 
-#Example Usage:
+# Example Usage:
 
 ```
 const BinarySearchTree = require("rb-binary-search-tree");
@@ -46,51 +48,51 @@ bst.empty();
 ```
 
 
-#Methods
+# Methods
 This library contains a class with the following methods:
 
 
-##instance.insert(key, data)
+## instance.insert(key, data)
 
 Adds an entry to the BST.
 
 
 
 
-##instance.remove(key)
+## instance.remove(key)
 
 Removes an entry from the BST.
 
 
 
-##instance.find(key)
+## instance.find(key)
 
 Returns an entry from the BST.
 
 
 
 
-##instance.length()
+## instance.length()
 
 Returns the number of entries in the BST.
 
 
 
 
-##instance.min()
+## instance.min()
 
 Returns the lowest key value.
 
 
 
-##instance.max()
+## instance.max()
 
 Returns the highest key value.
 
 
 
 
-##instance.inOrderTraverse(callBack)
+## instance.inOrderTraverse(callBack)
 
 Calls callback for every entry in the BST starting from the lowest key value up to the highest.
 
@@ -99,7 +101,7 @@ The arguments key and data shall be passed to the call back function.
 
 
 
-##instance.reverseOrderTraverse(callBack)
+## instance.reverseOrderTraverse(callBack)
 
 Calls callback for every entry in the BST starting from the highest key value down to the lowest.
 
@@ -108,7 +110,7 @@ The arguments key and data shall be passed to the call back function.
 
 
 
-##instance.rangeTraverse(from, to, callBack)
+## instance.rangeTraverse(from, to, callBack)
 
 Calls callback for every entry in the BST starting from the highest key value down to the lowest.
 
@@ -117,6 +119,6 @@ The arguments key and data shall be passed to the call back function.
 
 
 
-##empty()
+## empty()
 
 Removes all entries from the BST.
