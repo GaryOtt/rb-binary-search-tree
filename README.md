@@ -50,40 +50,51 @@ This library contains a class with the following methods:
 
 
 **instance.insert(key, data)**
+
 Adds an entry to the BST.
 
 **instance.remove(key)**
+
 Removes an entry from the BST.
 
 **instance.find(key)**
+
 Returns an entry from the BST.
 
 **instance.length()**
+
 Returns the number of entries in the BST.
 
 **instance.min()**
+
 Returns the lowest key value.
 
 **instance.max()**
+
 Returns the highest key value.
 
 
 **instance.inOrderTraverse(callBack)**
+
 Calls callback for every entry in the BST starting from the lowest key value up to the highest.
 
 The arguments key and data shall be passed to the call back function.
 
 
 **instance.reverseOrderTraverse(callBack)**
+
 Calls callback for every entry in the BST starting from the highest key value down to the lowest.
 
 The arguments key and data shall be passed to the call back function.
 
+
 **instance.rangeTraverse(from, to, callBack)**
+
 Calls callback for every entry in the BST starting from the highest key value down to the lowest.
 
 The arguments key and data shall be passed to the call back function.
 
 
 **empty()**
+
 Removes all entries from the BST.
