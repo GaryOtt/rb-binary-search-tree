@@ -32,7 +32,7 @@ module.exports = function() {
 		startNode = null,
 		count = 0,
 
-		//logLikeFuckingCrazy = false,
+		//logEverything = false,
 
 	/*	countRemoveType = {
 			oneone: 0,
@@ -391,7 +391,7 @@ module.exports = function() {
 					g2     = null;		//Grandchild 2
 
 
-				//if (logLikeFuckingCrazy) {
+				//if (logEverything) {
 				//	console.log("START resolveBlackCount of :" + (n ? n.key : "(null)"));
 				//	console.log("---------------------------------------");
 				//}
@@ -399,7 +399,7 @@ module.exports = function() {
 				//The really, really easy case:
 				if (n && n.red) {
 					n.red = false;
-					//if (logLikeFuckingCrazy) {
+					//if (logEverything) {
 					//	dumpTree(startNode, "Easy case");
 					//}
 					return;
@@ -437,7 +437,7 @@ module.exports = function() {
 						p.red = false;
 						getSibling(p).red = false;
 
-						//if (logLikeFuckingCrazy) {
+						//if (logEverything) {
 						//	dumpTree(startNode, "case 1.1");
 						//}
 					}
@@ -448,7 +448,7 @@ module.exports = function() {
 						p.red = false;
 						s.red = true;
 
-						//if (logLikeFuckingCrazy) {
+						//if (logEverything) {
 						//	dumpTree(startNode, "case 1.2");
 						//}
 					}
@@ -475,7 +475,7 @@ module.exports = function() {
 							(n_lt_p ? s.left : s.right).red = true;
 							rotate(s);
 
-							//if (logLikeFuckingCrazy) {
+							//if (logEverything) {
 							//	dumpTree(startNode, "case 2.1.2");
 							//}
 						}
@@ -485,7 +485,7 @@ module.exports = function() {
 				
 							//Online documentation does not say the child of nephew that is a left-right decendant must be red. But it MUST!
 							if ((nephew.left && !nephew.right) || (!nephew.left && nephew.right)) {
-								//Handle fucked up condition not mentioned in documentation
+								//Handle condition not mentioned in documentation
 
 								//console.log("Correction needed.");
 
@@ -499,7 +499,7 @@ module.exports = function() {
 
 									nephew = temp;
 
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1 Pre-correction (A)");
 									//}
 								}
@@ -513,19 +513,19 @@ module.exports = function() {
 
 									nephew = temp;
 
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1 Pre-correction (B)");
 									//}
 								}
 							}
 
-							//if (logLikeFuckingCrazy) {
+							//if (logEverything) {
 							//	console.log("nephew is ", nephew.key);
 							//}
 
 							if (nephew.left && leftRightDecendant(nephew.left)) {
 
-								//if (logLikeFuckingCrazy) {
+								//if (logEverything) {
 								//	console.log("ON THE LEFT");
 								//}
 
@@ -533,12 +533,12 @@ module.exports = function() {
 									nephew.left.red = false;
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step L-A1");
 									//}
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step L-A2");
 									//}
 								}
@@ -546,12 +546,12 @@ module.exports = function() {
 									temp = nephew.left;
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step L-B1");
 									//}
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step L-B2");									
 									//	console.log("Recursing...");
 									//}
@@ -561,7 +561,7 @@ module.exports = function() {
 							}
 							else if (nephew.right && leftRightDecendant(nephew.right)) {
 
-								//if (logLikeFuckingCrazy) {
+								//if (logEverything) {
 								//	console.log("ON THE RIGHT");
 								//}
 								
@@ -569,12 +569,12 @@ module.exports = function() {
 									nephew.right.red = false;
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step R-A1");
 									//}
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step R-A2");
 									//}
 								}
@@ -582,12 +582,12 @@ module.exports = function() {
 									temp = nephew.right;
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step R-B1");
 									//}
 
 									rotate(nephew);
-									//if (logLikeFuckingCrazy) {
+									//if (logEverything) {
 									//	dumpTree(startNode, "Case 2.1.1: Step R-B2");
 									//	console.log("Recursing...");
 									//}
@@ -596,7 +596,7 @@ module.exports = function() {
 								}
 							}
 
-							//if (logLikeFuckingCrazy) {
+							//if (logEverything) {
 							//	dumpTree(startNode, "case 2.1.1");
 							//}
 						}
@@ -629,7 +629,7 @@ module.exports = function() {
 							rotate(g1);		//and then up a 2nd step.
 							g1.red = false;
 
-							//if (logLikeFuckingCrazy) {
+							//if (logEverything) {
 							//	dumpTree(startNode, "case 2.2.1");
 							//}
 						}
@@ -646,7 +646,7 @@ module.exports = function() {
 							}
 
 
-							//if (logLikeFuckingCrazy) {
+							//if (logEverything) {
 							//	dumpTree(startNode, "case 2.2.2");
 							//}
 						}
@@ -664,7 +664,7 @@ module.exports = function() {
 
 
 		//if (key === "1/SRV/install/device/932") {
-		//	logLikeFuckingCrazy = true;
+		//	logEverything = true;
 		//}
 
 		if (!n) {
@@ -673,7 +673,7 @@ module.exports = function() {
 
 		count -= 1;
 
-		//if (logLikeFuckingCrazy) {
+		//if (logEverything) {
 		//	dumpTree(startNode, "INIT");
 		//}
 
