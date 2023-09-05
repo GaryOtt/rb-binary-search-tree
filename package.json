@@ -1,6 +1,6 @@
 {
   "name": "rb-binary-search-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Implementation of Red/Black Binary Search Tree",
   "main": "index.js",
   "scripts": {
@@ -14,5 +14,9 @@
     "Tree"
   ],
   "author": "Gary Ott",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/GaryOtt/rb-binary-search-tree.git"
+  }
 }
