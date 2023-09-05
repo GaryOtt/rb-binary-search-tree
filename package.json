@@ -1,6 +1,6 @@
 {
   "name": "rb-binary-search-tree",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Implementation of Red/Black Binary Search Tree",
   "main": "index.js",
   "scripts": {

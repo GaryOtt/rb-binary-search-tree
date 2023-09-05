@@ -17,7 +17,7 @@ Thanks go to those responsible for this lecture which was supremely helpful: htt
 ```
 const BinarySearchTree = require("rb-binary-search-tree");
 
-const bst = new new BinarySearchTree();
+const bst = new BinarySearchTree();
 
 bst.insert(1, "Apple");
 bst.insert(2, "Pear");
